@@ -47,3 +47,7 @@ a new mounted volume in docker-compose.yml).
 
 XDebug is installed - to use it you will need to set up path mappings in your IDE to 
 point from the location of your local files to the /var folder of the container.
+
+To update db run commands:
+
+`php artisan migrate`
