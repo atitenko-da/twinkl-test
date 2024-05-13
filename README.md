@@ -52,7 +52,7 @@ To update db run commands:
 
 `php artisan migrate`
 
-To check api endpoint make post request to:
+To check api endpoint make POST request to:
 
 `http://localhost:8008/api/subscription`
 
@@ -66,3 +66,7 @@ Example:
 `    "email":"test@mail.com",`
 `    "type":"parent"`
 `}'`
+
+To get list of all subscriptions make GET request to:
+
+`http://localhost:8008/api/subscriptions`
