@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use App\Enum\UserTypeEnum;
+use App\Models\Subscription;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Validator;
 
@@ -26,6 +27,8 @@ class SubscriptionController extends Controller
 
         $validated = $validator->validated();
 
-        return response()->json(['status' => 200, 'validated' => $validated]);
+        $subscription = Subscription::create($validated);
+
+        return response()->json(['status' => 200, 'validated' => $validated, 'id' => $subscription->id]);
     }
 }
