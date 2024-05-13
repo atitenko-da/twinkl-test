@@ -58,14 +58,16 @@ To check api endpoint make POST request to:
 
 Example:
 
-`curl --location 'http://localhost:8008/api/subscription' \`
-`--header 'Content-Type: application/json' \`
-`--data-raw '{`
-`    "first_name":"First",`
-`    "last_name":"Last",`
-`    "email":"test@mail.com",`
-`    "type":"parent"`
-`}'`
+```
+curl --location 'http://localhost:8008/api/subscription' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "first_name":"First",
+    "last_name":"Last",
+    "email":"test@mail.com",
+    "type":"parent"
+}'
+```
 
 To get list of all subscriptions make GET request to:
 
