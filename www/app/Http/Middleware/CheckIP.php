@@ -18,7 +18,7 @@ class CheckIP
         $blockList = ['127.0.0.1'];
 
         if (in_array($request->ip(), $blockList)) {
-            return response()->json(['status' => 403]);
+            return response()->json(['status' => 403], 403);
         }
 
         return $next($request);

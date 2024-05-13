@@ -55,3 +55,14 @@ To update db run commands:
 To check api endpoint make post request to:
 
 `http://localhost:8008/api/subscription`
+
+Example:
+
+`curl --location 'http://localhost:8008/api/subscription' \`
+`--header 'Content-Type: application/json' \`
+`--data-raw '{`
+`    "first_name":"First",`
+`    "last_name":"Last",`
+`    "email":"test@mail.com",`
+`    "type":"parent"`
+`}'`
