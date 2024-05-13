@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SubscriptionController;
+use App\Http\Middleware\CheckIP;
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/subscription', [SubscriptionController::class, 'store'])
+                ->middleware(CheckIp::class)
+                ->name('subscription');

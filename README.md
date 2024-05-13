@@ -51,3 +51,7 @@ point from the location of your local files to the /var folder of the container.
 To update db run commands:
 
 `php artisan migrate`
+
+To check api endpoint make post request to:
+
+`http://localhost:8008/api/subscription`
